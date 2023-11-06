@@ -90,9 +90,6 @@ INSERT INTO cliente (dni, nombre) VALUES
   ('77777777D', 'Manuel Sánchez'),
   ('88888888E', 'Carmen Pérez');
 
-
-SELECT * FROM cliente;
-
 INSERT INTO empleado (nombre, fecha_ingreso, ventas_tajinaste_plus) 
 VALUES 
   ('Laura Sánchez', '2021-12-10', 11),
@@ -101,8 +98,6 @@ VALUES
   ('Carlos Baute', '2022-02-15', 14),
   ('Elena de Troya', '2022-01-05', 10);
 
-SELECT * FROM EMPLEADO;
-
 INSERT INTO VIVERO (nombre, direccion, localizacion) 
 VALUES 
   ('Flores de Madrid', 'Calle Gran Vía 123', 'Madrid'),
@@ -110,8 +105,6 @@ VALUES
   ('Jardín del Paraíso', 'Calle del Arco Iris 789', 'Edén'),
   ('El Vivero de las Maravillas', 'Camino de las Maravillas 321', 'Maravillaville'),
   ('Plantas Risueñas', 'Calle de la Alegría 654', 'Ciudad Feliz');
-
-SELECT * FROM vivero;
 
 INSERT INTO zona (nombre, localizacion, id_vivero) 
 VALUES 
@@ -141,9 +134,6 @@ VALUES
   ('Zona de las Carcajadas', 'Sector D', 5),
   ('Zona de la Alegría', 'Sector E', 5);
 
-SELECT * FROM zona;
-
-
 INSERT INTO miembro_tajinaste (fecha_ingreso, bonificacion, dni) 
 VALUES 
   ('2022-01-15', ARRAY['Descuento 10%', 'Envío gratis'], '12345678R'),
@@ -152,36 +142,33 @@ VALUES
   ('2022-03-10', ARRAY['Descuento 20%'], '11111111N'),
   ('2022-02-01', ARRAY['Envío gratis'], '66696969P');
 
-
 INSERT INTO producto (id_zona, stock, nombre, precio, descripcion) 
 VALUES 
   (1, 50, 'Rosa Roja', 10.5, 'Una hermosa rosa roja'),
-  (1, 30, 'Cactus de Aloe', 8.2, 'Un cactus de aloe vera resistente'),
-  (1, 20, 'Arbusto de Boj', 15.7, 'Un arbusto decorativo'),
-  (1, 40, 'Orquídea Blanca', 12.0, 'Una orquídea de color blanco puro'),
-  (1, 60, 'Palmera Datilera', 25.3, 'Una palmera con dátiles deliciosos'),
-  (2, 45, 'Cactus de Espinas', 7.8, 'Un cactus con espinas afiladas'),
-  (2, 25, 'Ficus de Hoja Grande', 18.9, 'Un ficus con hojas grandes y verdes'),
-  (2, 35, 'Manzano', 14.2, 'Un árbol de manzanas jugosas'),
-  (2, 50, 'Hibisco Tropical', 11.5, 'Una planta de hibisco exótica'),
-  (2, 30, 'Margarita Silvestre', 9.0, 'Una margarita de campo'),
-  (3, 55, 'Rosa Encantada', 13.6, 'Una rosa con encanto mágico'),
-  (3, 28, 'Cala de Ensueño', 8.7, 'Una cala blanca y elegante'),
-  (3, 22, 'Magnolia de Ensueño', 16.5, 'Una magnolia con flores fragantes'),
-  (3, 38, 'Lirio de Maravillas', 11.8, 'Un lirio de colores vibrantes'),
-  (3, 60, 'Bonsai de Misterios', 21.0, 'Un bonsai con aura misteriosa'),
-  (4, 42, 'Rosa de los Secretos', 12.9, 'Una rosa llena de secretos'),
-  (4, 20, 'Ficus Encantado', 19.3, 'Un ficus con un encanto especial'),
-  (4, 32, 'Manzano de Tesoros', 14.8, 'Un manzano lleno de tesoros'),
-  (4, 48, 'Hibisco de Sorpresas', 11.2, 'Un hibisco lleno de sorpresas'),
-  (4, 26, 'Margarita de Risa', 9.5, 'Una margarita que te hará reír'),
-  (5, 58, 'Rosa Risueña', 13.0, 'Una rosa llena de buen humor'),
-  (5, 33, 'Cala del Buen Humor', 8.9, 'Una cala que alegra el día'),
-  (5, 27, 'Magnolia Sonriente', 17.2, 'Una magnolia que te hace sonreír'),
-  (5, 36, 'Lirio de las Carcajadas', 11.3, 'Un lirio que provoca carcajadas'),
-  (5, 62, 'Bonsai de Alegría', 20.1, 'Un bonsai que trae alegría');
-
-SELECT * FROM producto;
+  (6, 30, 'Cactus de Aloe', 8.2, 'Un cactus de aloe vera resistente'),
+  (3, 20, 'Arbusto de Boj', 15.7, 'Un arbusto decorativo'),
+  (4, 40, 'Orquídea Blanca', 12.0, 'Una orquídea de color blanco puro'),
+  (5, 60, 'Palmera Datilera', 25.3, 'Una palmera con dátiles deliciosos'),
+  (6, 45, 'Cactus de Espinas', 7.8, 'Un cactus con espinas afiladas'),
+  (8, 25, 'Ficus de Hoja Grande', 18.9, 'Un ficus con hojas grandes y verdes'),
+  (8, 35, 'Manzano', 14.2, 'Un árbol de manzanas jugosas'),
+  (9, 50, 'Hibisco Tropical', 11.5, 'Una planta de hibisco exótica'),
+  (10, 30, 'Margarita Silvestre', 9.0, 'Una margarita de campo'),
+  (1, 55, 'Rosa Grandiflora', 13.6, 'Una rosa con encanto mágico'),
+  (7, 28, 'Cala', 8.7, 'Una cala blanca y elegante'),
+  (7, 22, 'Magnolia', 16.5, 'Una magnolia con flores fragantes'),
+  (7, 38, 'Lirio', 11.8, 'Un lirio de colores vibrantes'),
+  (7, 60, 'Bonsai', 21.0, 'Un bonsai con aura misteriosa'),
+  (1, 42, 'Rosa Amarilla', 12.9, 'Una rosa llena de secretos'),
+  (8, 20, 'Ficus Encantado', 19.3, 'Un ficus con un encanto especial'),
+  (8, 32, 'Manzano Golden', 14.8, 'Un manzano lleno de tesoros'),
+  (4, 48, 'Hibisco Pacífico', 11.2, 'Un hibisco lleno de sorpresas'),
+  (10, 26, 'Margarita de la risa', 9.5, 'Una margarita que te hará reír'),
+  (1, 58, 'Rosa de té', 13.0, 'Una rosa llena de buen humor'),
+  (5, 33, 'Cala taciturna', 8.9, 'Una cala que alegra el día'),
+  (10, 27, 'Magnolia', 17.2, 'Una magnolia que te hace sonreír'),
+  (5, 36, 'Lirio violeta', 11.3, 'Un lirio que provoca carcajadas'),
+  (5, 62, 'Bonsai japonés', 20.1, 'Un bonsai que trae alegría');
 
 INSERT INTO compra (dni_cliente, id_empleado, monto_total) 
 VALUES 
@@ -190,8 +177,6 @@ VALUES
   ('55555555M', 3, 60.0),
   ('11111111N', 4, 70.0),
   ('66696969P', 5, 55.0);
-
-SELECT * FROM compra;
 
 INSERT INTO lista_productos (id_pedido, id_producto, cantidad) 
 VALUES 
@@ -224,4 +209,30 @@ VALUES
   ('Podar palmeras', '2023-11-05', '2023-11-07', 5, 5),
   ('Regar cactus', '2023-11-06', '2023-11-08', 2, 2),
   ('Abonar arbustos', '2023-11-07', '2023-11-09', 3, 3);
+
+
+
+/* ----------------------------- CONSULTAS ----------------------------- */
+
+/* 1. Mostrar el nombre de los clientes que son miembros de Tajinaste. */
+SELECT nombre FROM cliente 
+WHERE dni IN (SELECT dni FROM miembro_tajinaste);
+
+/* 2. Mostrar el nombre de los empleados que han realizado ventas de Tajinaste. */
+SELECT nombre FROM empleado 
+WHERE id_empleado IN (SELECT id_empleado FROM compra);
+
+
+/* 3. Mostrar productos que se encuentran en la zona con nombre = 'Zona Rosas'. */
+SELECT nombre FROM producto 
+WHERE id_zona IN (SELECT id_zona FROM zona WHERE nombre = 'Zona Rosas');
+
+/* 4. Mostrar qué productos se han comprado en la compra con id_pedido = 5 y sus respectivos precios. */
+SELECT nombre, precio FROM producto 
+WHERE id_producto IN (SELECT id_producto FROM lista_productos WHERE id_pedido = 5);
+
+
+
+
+
 
