@@ -4,12 +4,12 @@
 
 > Las capturas mostradas a continuación se pueden encontrar en la carpeta img/ 
 
-![esquema del modelo entidad relación](img\vivero-entidadrelacion.png)
+![esquema del modelo entidad relación](img/vivero-entidadrelacion.png)
 Este esquema ha sido modificado respecto a la anterior entrega debido a una serie de inconveniencias lógicas, que hacían poco favorable el paso al modelo relacional.
 
 ## TABLAS DEL MODELO RELACIONAL
 
-![tablas del modelo relacional](img\vivero-relacional.png)
+![tablas del modelo relacional](img/vivero-relacional.png)
 
 ## SCRIPT DE POSTGRESQL
 
@@ -46,8 +46,8 @@ Se crean las tablas de:
 
 ### QUERYS REPRESENTATIVOS
 
-![query1](img\q1.png)
-![query1result](img\q1r.png)
+![query1](img/q1.png)
+![query1result](img/q1r.png)
 
 - - -
 
@@ -63,5 +63,3 @@ Se crean las tablas de:
 
 ![query4](img/q4.png)
 ![query4result](img/q4r.png)
-
-
