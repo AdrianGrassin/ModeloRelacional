@@ -51,8 +51,8 @@ Se crean las tablas de:
 
 - - -
 
-![query2](img\q2.png)
-![query2result](img\q2r.png)
+![query2](img/q2.png)
+![query2result](img/q2r.png)
 
 - - -
 
